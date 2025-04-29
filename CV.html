@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Samira Guarnaouy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f7fa;
+            color: #333;
+            padding: 20px;
+        }
+
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e6ed;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 25px;
+            border: 3px solid #4a6fa5;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #4a6fa5;
+        }
+
+        .contact-item i {
+            margin-right: 8px;
+            color: #4a6fa5;
+            font-size: 16px;
+        }
+
+        .contact-item a {
+            color: #4a6fa5;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #2c3e50;
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        .intro {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #4a6fa5;
+        }
+
+        .intro p {
+            font-size: 15px;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #4a6fa5;
+            border-radius: 3px;
+        }
+
+        .item {
+            display: flex;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #e0e6ed;
+        }
+
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        .date {
+            width: 150px;
+            flex-shrink: 0;
+            font-weight: 500;
+            color: #4a6fa5;
+            font-size: 14px;
+        }
+
+        .details {
+            flex: 1;
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .details p {
+            font-size: 14px;
+            color: #4a5568;
+            margin-bottom: 8px;
+        }
+
+        .problem {
+            background-color: #f8fafc;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #4a5568;
+            border-left: 3px solid #e74c3c;
+        }
+
+        .problem strong {
+            color: #e74c3c;
+            font-weight: 500;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        ul li::before {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #4a6fa5;
+            font-size: 12px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .skill-tag {
+            background-color: #e3ebf6;
+            color: #4a6fa5;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .languages-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .language-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .language-item i {
+            margin-right: 8px;
+            color: #4a6fa5;
+        }
+
+        @media (max-width: 768px) {
+            .cv-container {
+                padding: 25px;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-pic {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .contact-info {
+                justify-content: center;
+            }
+
+            .item {
+                flex-direction: column;
+            }
+
+            .date {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            .languages-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <header>
+            <!-- Vous pouvez ajouter une photo de profil ici -->
+            <!-- <img src="profile.jpg" alt="Samira Guarnaouy" class="profile-pic"> -->
+            <div class="header-text">
+                <h1>SAMIRA GUARNAOUY</h1>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:samiragarnaoui2002@gmail.com">samiragarnaoui2002@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/samira-guarnaouya917ab1b3" target="_blank">linkedin.com/in/samira-guarnaouy</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+33 XX XX XX XX XX</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Tarbes, France</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="intro">
+            <p>Étudiante en double diplôme en génie industriel à l'École Nationale d'Ingénieurs de Tarbes - ENIT. Enthousiaste à l'idée d'appliquer mes connaissances académiques, de développer de nouvelles compétences et de contribuer à une équipe dynamique dans le domaine de l'ingénierie et de la production industrielle.</p>
+        </section>
+
+        <section class="education">
+            <h2><i class="fas fa-graduation-cap" style="margin-right: 10px;"></i>FORMATION</h2>
+            <div class="item">
+                <div class="date">2024-2026</div>
+                <div class="details">
+                    <h3>Double diplôme en Génie Industriel</h3>
+                    <p>ENIT - École Nationale d'Ingénieurs de Tunis</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="date">2022-2024</div>
+                <div class="details">
+                    <h3>Génie Industriel et Productique</h3>
+                    <p>Académie Internationale Mohammed VI de l'Aviation Civile (AIAC)</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="date">2020-2022</div>
+                <div class="details">
+                    <h3>Classe Préparatoire MP</h3>
+                    <p>Centre Marrakech Prépas CPGE, mathématiques & physiques</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience">
+            <h2><i class="fas fa-briefcase" style="margin-right: 10px;"></i>EXPÉRIENCE PROFESSIONNELLE</h2>
+            <div class="item">
+                <div class="date">Juillet - Août 2024</div>
+                <div class="details">
+                    <h3>Stage technique en HSE - OCP Khouribga</h3>
+                    <p class="problem"><strong>Problématique :</strong> Mise en œuvre d'un SMCA conforme à ISO 22301, avec analyse des risques et élaboration des plans de continuité pour optimiser l'extraction et le traitement du phosphate.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="date">Juillet - Août 2023</div>
+                <div class="details">
+                    <h3>Stage d'initiation - Ménara Holding (Département Production)</h3>
+                    <p class="problem"><strong>Problématique :</strong> Analyse VSM : Amélioration de la production de poutrelles en béton pour réduire les temps d'attente.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2><i class="fas fa-cogs" style="margin-right: 10px;"></i>COMPÉTENCES</h2>
+            <div class="skills-container">
+                <div class="skill-tag">Ordonnancement et stratégie</div>
+                <div class="skill-tag">Lean manufacturing</div>
+                <div class="skill-tag">Gestion de stocks</div>
+                <div class="skill-tag">Implantation des moyens de production</div>
+                <div class="skill-tag">Management des ressources de la production (MRP)</div>
+                <div class="skill-tag">Sûreté et gestion des risques</div>
+            </div>
+        </section>
+
+        <section class="languages">
+            <h2><i class="fas fa-language" style="margin-right: 10px;"></i>LANGUES</h2>
+            <div class="languages-container">
+                <div class="language-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Arabe</span>
+                </div>
+                <div class="language-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Français</span>
+                </div>
+                <div class="language-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Anglais</span>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
